@@ -18,12 +18,12 @@ export class App extends Component {
 
   countPositiveFeedbackPercentage = () => {
     const { good } = this.state;
-    return parseInt((good / this.countTotalFeedback()) * 100);
+    return console.log(parseInt((good / this.countTotalFeedback()) * 100));
   };
 
   onClickBtnFeedback = e => {
     const currentBtn = e.currentTarget.name;
-    console.log(currentBtn);
+    // console.log(currentBtn);
     this.setState(prevState => {
       return { [currentBtn]: prevState[currentBtn] + 1 };
     });
